@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/product/product",
+    "pages/income/income",
+    "pages/industry/industry"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序demo",
+    "backgroundColor": "white",
+    "navigationBarBackgroundColor": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"img/index-1.png",
+        "selectedIconPath":"img/index-3.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "iconPath": "img/product-1.png",
+        "selectedIconPath": "img/product-3.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/income/income",
+        "iconPath": "img/income-1.png",
+        "selectedIconPath": "img/income-3.png",
+        "text": "收益"
+      },
+      {
+        "pagePath": "pages/industry/industry",
+        "iconPath": "img/hy-1.png",
+        "selectedIconPath": "img/hy-3.png",
+        "text": "行业"
+      }
+    ]
+  },
+  "usingComponents": {}
+  
+}
