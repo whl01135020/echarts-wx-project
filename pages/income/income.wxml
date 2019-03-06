@@ -1,0 +1,147 @@
+<view class="container">
+  <view class="nav">
+
+    <view class="nav-son borders {{shownavindex == 2? 'active' : ''}}" bindtap="list" data-nav="2">
+      <view class="content">nav1</view>
+      <view class="icon" style="color:#fff"></view>
+    </view>
+    <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+      <view class="content">nav2</view>
+      <view class="icon" style="color:#fff"></view>
+    </view>
+  </view>
+
+  <view class="temp temp2 contentCenter {{nzopen ? 'slidown' : 'slidup'}} {{nzshow ? 'disappear':''}}">
+     <view wx:for="{{watchContent}}"  wx:key="index" bindtap='selectWatch' data-index="{{index}}" class="pxTable {{watchIndex == index?'current4':''}}">
+      {{item}}
+    </view>
+  </view>
+
+  <view class="temp temp2 contentCenter {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+    <view wx:for="{{padContent}}" wx:key="index" bindtap='selectPad' data-index="{{index}}" class="pxTable {{pdIndex == index?'current4':''}}">
+      {{item}}
+    </view>
+  </view>
+
+  <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+
+  <view class="card">
+    <view class="card-title">
+      <view class="card-title-item title-text">
+        2019年累计收入
+      </view>
+    </view>
+    <view class="card-body">
+      <view class="title-v4">
+        截止昨日
+      </view>
+      <view class="title-num">
+        <view class="title-v4">
+          累计
+          <view>用户</view>
+        </view>
+        <view class="title-v1 card-v1-data">
+          1,234.56万
+        </view>
+
+      </view>
+      <view class="table">
+        <view class="tr">
+          <view class="th th1">序号</view>
+          <view class="th th2">日期</view>
+          <view class="th th3">时间</view>
+          <view class="th th4">累计激活</view>
+        </view>
+        <view class="tr" wx:for="{{dataArray}}" wx:key="idx" wx:for-index="index" wx:for-item="item">
+          <view class="td td1">{{index}}</view>
+          <view class="td td2">{{item.date}}</view>
+          <view class="td td3">{{item.time}}</view>
+          <view class="td td4">{{item.value}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+   <view class="card">
+    <view class="card-title">
+      <view class="card-title-item title-text">
+        用户趋势
+      </view>
+    </view>
+    <view class="card-body">
+      <view class="title-v4">
+        截止昨日
+      </view>
+      <view class="title-num">
+        <view class="title-v4">
+          累计
+          <view>用户</view>
+        </view>
+        <view class="title-v1 card-v1-data">
+          1,234.00万
+        </view>
+      </view>
+      <view class="card-rows">
+        <view class="card-column first">
+          <view class="title-v4">日活</view>
+          <view class="title-v2 data-bold">123万</view>
+          <view class="title-v4">同比:
+            <text class="rate-up">1%</text>
+          </view>
+          <view class="title-v4">环比:
+            <text class="rate-up">3%</text>
+          </view>
+        </view>
+        <view class="card-column first">
+          <view class="title-v4">周活</view>
+          <view class="title-v2 data-bold">456万</view>
+          <view class="title-v4">同比:
+            <text class="rate-down">-1.3%</text>
+          </view>
+          <view class="title-v4">环比:
+            <text class="rate-up">3%</text>
+          </view>
+        </view>
+        <view class="card-column">
+          <view class="title-v4">月活</view>
+          <view class="title-v2 data-bold">789万</view>
+          <view class="title-v4">同比:
+            <text class="rate-up">1%</text>
+          </view>
+          <view class="title-v4">环比:
+            <text class="rate-down">-2.10%</text>
+          </view>
+        </view>
+      </view>
+      <view class="echart-box">
+        <view class="date-range">
+          <view class="quick-date">
+            <view class="date-block">日期范围</view>
+            <view id="rencent7" class="date-block {{recentDayClick=='rencent7'?'recent-active':''}}" bindtap='rencentClick'>近7天</view>
+            <view id="rencent30" class="date-block {{recentDayClick=='rencent30'?'recent-active':''}}" bindtap='rencentClick'>近30天</view>
+          </view>
+  
+          <view class="section">
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+              <view class="picker">
+                开始日期: {{date}}
+              </view>
+            </picker>
+          </view>
+          <view class="section">
+            <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+              <view class="picker">
+                结束日期: {{date}}
+              </view>
+            </picker>
+          </view>
+
+        </view>
+        <view class="echart">
+          <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+.tag-block{
+  display: flex;
+  flex-wrap: wrap
+}
+.tag-item{
+  padding:3px 5px;
+  margin: 5px 0;
+  border:1px solid #eee;
+  border-radius: 5px;
+  font-size:12px;
+}
+.tag-item:not(:first-child){
+  margin-left:10px;
+}
+.tag-item:first-child{
+  color:#fff;
+  background-color: #0aadfd;
+}

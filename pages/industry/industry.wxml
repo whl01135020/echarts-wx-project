@@ -1,0 +1,77 @@
+<view class="container">
+  <view class="header">
+    <view class="tab-item {{item.name == headItem?'active':''}} " wx:for="{{headArray}}" wx:key="index" wx:for-index="idx" wx:for-item="item" bindtap='headNavClick' data-classify="{{item.name}}">
+      <text class="tab-item-text" :id="{{idx}}">{{item.name}}</text>
+    </view>
+  </view>
+  <view class="card">
+    <view class="card-title">
+      <view class="card-title-item title-text">
+        行业趋势
+      </view>
+    </view>
+    <view class="card-body">
+      <view class="brand-data">
+        <view class="brand-item">
+          <view class="brand-img">
+             <image src="../../img/pr.svg"></image>
+          </view>
+          <view class="brand-text">
+              <view class="brand-left">
+                <view><view class="black-horse">品牌1</view>(阿里巴巴)</view>
+                <view>销量排名<text class="font-red">12</text></view>
+              </view>
+              <view class="brand-right">
+                <view class="brand-up-name">本月上升最快</view>
+                <view>排名变化<text class="font-red">42</text></view>
+              </view>
+          </view>
+          <view class="brand-class">型号:<text class="alink-brand">123</text></view>
+        </view>
+        <view class="brand-item">
+          <view class="brand-img">
+            <image src="../../img/pr1.svg"></image>
+          </view>
+          <view class="brand-text">
+              <view class="brand-left">
+                <view><view class="black-horse">品牌2</view>(阿里妈妈)</view>
+                <view>销量排名<text class="font-red">12</text></view>
+              </view>
+              <view class="brand-rightt">
+                <view class="brand-up-name">本月上升最快</view>
+                <view>排名变化<text class="font-red">37</text></view>
+              </view>
+          </view>
+          <view class="brand-class">型号:<text class="alink-brand">123</text></view>
+        </view>
+      </view>
+      <view class="table">
+        <view class="tr">
+          <view class="th th1">序号</view>
+          <view class="th th2">日期</view>
+          <view class="th th3">同比</view>
+          <view class="th th4">环比</view>
+        </view>
+        <view class="tr" wx:for="{{activeDtaArray}}" wx:key="idx" wx:for-index="index" wx:for-item="item">
+          <view class="td td1">{{index}}</view>
+          <view class="td td2">{{item.date}}</view>
+          <view class="td td3 {{item.yRate>0? 'rate-up':'rate-down'}}">{{item.yRate}}</view>
+          <view class="td td4 {{item.chainRate>0? 'rate-up':'rate-down'}}">{{item.chainRate}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="card">
+    <view class="card-title">
+      <view class="card-title-item title-text">
+        行业占比
+      </view>
+    </view>
+    <view class="card-body">
+     <view class="echart">
+        <ec-canvas id="mychart-dom-bar" canvas-id="chart-pie" ec="{{ ec }}"></ec-canvas>
+      </view>
+    </view>
+  </view>
+</view>

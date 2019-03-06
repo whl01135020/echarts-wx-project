@@ -1,0 +1,34 @@
+.brand-item{
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1.5rem;
+}
+.brand-item:not(:last-child){
+  border-bottom:1px solid #eee;
+}
+.brand-img image{
+  width: 4rem;
+  height: 5rem;
+}
+.brand-class{
+  font-size: 14px;
+}
+.brand-text{
+  display: flex;
+  font-size: 14px;
+}
+.black-horse{
+  font-weight: bold;
+}
+.font-red{
+  color:red;
+  font-weight: bold;
+}
+.brand-up-name{
+  color:red;
+}
+.alink-brand{
+  color: #72ACE3;
+  border-bottom:1px solid #72ACE3;
+}
