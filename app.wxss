@@ -1,0 +1,165 @@
+.container {
+  background:#eee; 
+  font-family: 'Microsoft Yahei';
+  padding:0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+} 
+.card{
+  border-radius:8px;
+  background: #fff;
+  margin-top: 10px;
+}
+.card-title{
+  display: flex;
+  justify-content: space-between;
+  padding:.5rem;
+  border-bottom: 1px solid #eee;
+}
+.title-link{
+  font-size: 12px;
+  color:#989595;
+}
+.title-v4{
+  font-size:12px;
+  text-align: center;
+}
+.card-body{
+  padding:10px;
+}
+.title-v1{
+  font-size:24px;
+}
+.title-num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:5px;
+}
+.table{
+  border:1px solid #dadada;
+  border-right:0;
+  border-bottom: 0;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.th,.td{
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+
+.th{
+  font-weight: 800;
+  font-size: 28rpx;
+  color: #330e0e;
+}
+.td{
+  font-size: 20rpx;
+}
+.card-data-v4{
+  margin-left: 5px;
+}
+.rate-up{
+  color:red;
+}
+.rate-down{
+  color:green;
+}
+.card-v1-data{
+  color:#0aadfd;
+}
+.card-rows{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.card-column{
+  padding:5px;
+  padding-bottom: 0;
+  text-align: center;
+  flex:1;
+}
+.card-column.first{
+  border-right:1px solid #dadada;
+}
+/* .title-v3{
+  font-size:12px;
+} */
+.title-v2{
+  font-size:22px;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+.tab-item{
+  align-items:center;
+  background-color: #fff;
+  padding:5px;
+  flex:1;
+  text-align: center;
+  border-bottom:2px solid #333399;
+}
+.tab-item.active {
+  background-color: #FF0033;
+  color:#fff;
+}
+data-bold{
+  font-weight: blod;
+}
+ec-canvas {
+  width: 100%;
+  height: 10rem;
+}
+.echart{
+  width:100%;
+  height:10rem;
+}
+.quick-date{
+  display: inline-block;
+}
+.date-block{
+  font-size:12px;
+  padding:5px;
+  display: inline-block;
+}
+.recent-active{
+  border-bottom: 1px solid #0aadfd;
+}
+.quick-date-active{
+  border-bottom: 2px solid #0aadfd;
+}
+.select-box{
+  display: flex;
+  align-items:center;
+  padding-left:30rpx;
+}
+.select{ 
+  font-size: 30rpx;
+  padding:45rpx 0 30rpx 30rpx;
+  color: #000;
+}
+.section{
+  font-size: 12px;
+  display: inline-block;
+  padding:0 5px;
+}
+.date-quick-range{
+  display: flex;
+  justify-content: space-between;
+}
+.quick-date-item{
+  padding:0 5px;
+  font-size: 14px;
+}
