@@ -5,3 +5,5 @@
 * 项目效果二维码
 
 ![img](https://github.com/whl01135020/echarts-wx-project/blob/master/img/xcx.jpg)
+
+^_^
